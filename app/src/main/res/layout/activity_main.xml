@@ -50,8 +50,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Normal  (10%)"/>
-        
+
+        <RadioButton
+            android:id="@+id/option_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"/>
+
     </RadioGroup>
+
+    <EditText
+        android:id="@+id/other_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Other percentage(only integer)"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@id/tip_options"
+        app:layout_constraintStart_toEndOf="@id/tip_options"/>
 
     <Switch
         android:id="@+id/round_tip"
@@ -74,9 +89,23 @@
 
     <TextView
         android:id="@+id/tip_result"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
         android:text="tip amount"
         app:layout_constraintTop_toBottomOf="@id/calculate_button"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/total_bill"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tip_result"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="total amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
